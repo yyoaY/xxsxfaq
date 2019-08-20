@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+#title{
+	background-color:#FFC;
+	margin-top:10px;
+	width:200px;
+	height:40px;
+	text-align:center;
+	font-size:20px;
+	font-family:幼圆;
+	padding-top:15px;}
+#bg{	
+	background-image:url(../picture/test-doggerel.jpg);
+	}
+#doggerel{
+	font-family:幼圆;
+	font-size:20px;
+	color:#9605AA;
+	font-weight:bolder;
+	text-align:center;
+	line-height:50px;
+	background-color:rgba(255,254,242,0.7);
+}
+.bt{
+	border:none;
+	background-color:#FFF;
+	color:#3FF;
+	font-weight:bolder;
+}
+
+#nbutton0{
+	width:340px;
+	height:70px;
+	left:0px;
+	top:450px;
+	display:block;
+	float:left;
+	position:absolute;
+	}
+#img{
+	float:left;
+	background-color:rgba(248,144,90,0.30);
+}
+#show:hover{
+	width:270px;
+	color:#FFFFFF;
+	}
+#show{
+	transition:width 2s;
+	-moz-transition:width 2s; /* Firefox 4 */
+	-webkit-transition:width 2s; /* Safari and Chrome */
+	-o-transition:width 2s;
+	background-color:rgba(248,144,90,0.30);
+	float:left;
+	text-align:center;
+	width:180px;
+	height:70px;
+	line-height:70px;
+	color:#F69;
+	font-weight:bolder;}
+#nbutton1{
+	width:340px;
+	height:70px;
+	right:0px;
+	top:450px;
+	display:block;
+	float:right;
+	position:absolute;
+	}
+#img1{
+	float:right;
+	margin-right:0px;
+	padding-right:0px;
+	background-color:rgba(248,144,90,0.30);
+	}
+#show1:hover{
+	width:270px;
+	color:#FFFFFF;
+	}
+#show1{
+	transition:width 2s;
+	-moz-transition:width 2s;  Firefox 4 
+	-webkit-transition:width 2s; /* Safari and Chrome */
+	-o-transition:width 2s;
+	background-color:rgba(248,144,90,0.30);
+	float:right;
+	text-align:center;
+	width:180px;
+	height:70px;
+	line-height:70px;
+	color:#F69;
+	font-weight:bolder;
+	margin-right:0px;
+	padding-right:0px;
+}
+/*xjl*/
+#xjl{
+	position:absolute;
+	z-index:2;
+	top:80px;
+}
+#xjl p{
+	width: 200px;
+    padding: 10px;
+    margin: 0;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    color: wheat;
+    font-weight: bold;
+}

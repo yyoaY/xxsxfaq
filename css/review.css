@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+#bg{
+	background-image:url(../picture/bg_blackboard.jpg);
+}
+/*contain*/
+#contain{
+	padding:0 80px;
+	color: white;
+    font-size: 20px;
+    line-height: 30px;
+	background-color:rgba(0,0,0,0.4);
+}
+.imp{
+	font-weight:bold;
+	size:28px;
+	color:#FFB7C2;
+}
+/*foot*/
+#foot{
+	margin-top:50px;
+	padding-right:80px;
+}
+/*button*/
+#button{
+    display: block;
+    float: left;
+	position:absolute;
+}
+button{
+	font-family:幼圆;
+	font-size:16px;
+	color:white;
+	background-color:rgba(0,0,0,0.4);
+}

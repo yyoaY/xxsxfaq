@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+#bg{
+	background-image:url(../picture/bg_xhr.jpg);
+}
+/*head*/
+#head{
+	height:15%;
+}
+#head div{
+	display:block;
+	float:left;
+}
+#question{
+	position: relative;
+    left: 50%;
+	width: 800px;
+    margin-left: -420px;
+}
+#number{
+	width: 150px;
+    height: 40px;
+    text-align: center;
+    line-height: 38px;
+    color: #FFFFFF;
+    font-size: 30px;
+	font-weight:bold;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 25px 0px 0px 25px;
+}
+#title{
+	font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 0px 25px 25px 0px;
+    color: #FFF;
+    padding: 0 20px;
+}
+/*contain*/
+#contain{
+	height:80%;
+}
+#box_choice{
+	margin:0 auto;
+}
+td{
+	min-height:230px;
+	min-width:220px;
+}
+.choice{
+	width:220px;
+	height:210px;
+	text-align:center;
+	background-color:rgba(0,0,0,0.5);
+	border-radius:25px;
+}
+.picture img{
+	width:220px;
+	height:160px;
+	border-radius:25px 25px 0 0;
+}
+.text{
+	width:100%;
+	color:#FFF;
+	font-weight:bold;
+}
+.tip{
+	text-align:center;
+	border-top:1px #FFC groove;
+	color:#FCC;
+	width:100%;
+	line-height:30px;
+	display:none;
+}
+#correct{
+	position: relative;
+    left: 50%;
+	display:none;
+}
+/*zsd*/
+#zsd{
+	float:left;
+}
+/*choice cr*/
+#cr{
+	float:left;
+	width:330px;
+	height:320px;
+}
+#pr img{
+	width:330px;
+	height:250px;
+}
+#tr{
+	font-size:26px;
+}
+#tipr{
+	font-size:24px;
+	line-height:32px;
+}
+#z1{
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 8px;
+    color: white;
+    line-height: 30px;
+}
+/*bottom*/
+#bottom{
+    display: block;
+    float: left;
+	position:absolute;
+}
+/*button*/
+#button{
+	height:5%;
+	float:right;
+}
+button{
+	font-family:幼圆;
+	font-size:16px;
+	color:white;
+	background-color:rgba(0,0,0,0.4);
+}
+.btn{
+	background-color:rgba(253,90,26,0.70);
+}
+
+		

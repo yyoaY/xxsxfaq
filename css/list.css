@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*bg_pic*/
+#bg_pic{
+	z-index:-1;
+	position:absolute;
+}
+.blur {-webkit-filter: blur(6px);filter: blur(6px);}
+
+/*title*/
+#title{
+	text-align:center;
+}
+#ml{
+	width: 190px;
+    height: 200px;
+    line-height: 190px;
+    position: relative;
+    left: 50%;
+    margin-left: -100px;
+    font-size: 46px;
+    font-weight: 900;
+    letter-spacing: 9px;
+    color: #FFF;
+    position: absolute;
+	color: darkblue;
+}
+/*contain*/
+#left,#right{
+	display:block;
+	float:left;
+	/*background-color:#FFC3C4;*/
+	position:absolute;
+	width:450px;
+	height:450px;
+	overflow:visible;
+}
+#zsgs,#zsyy{
+	height: 50px;
+    width: 150px;
+    line-height: 50px;
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    position:relative;
+	left:150px;
+	top:200px;
+}
+#hztszs,#mhqzs,#fhzs,#zswd,#sjyy,#skl{
+	background-image:url(../picture/b-4.png);
+ 	background-repeat:no-repeat;
+  	background-position:15px -20px;
+	height:170px;
+	width:200px;
+	line-height:210px;
+	font-size:26px;
+	text-align:center;
+	position:relative;
+	font-weight:900;
+}
+#hztszs{
+	left:200px;
+	top:-10px;
+}
+#mhqzs{
+	left:-32px;
+	top:-70px;
+}
+#fhzs{
+	left:200px;
+	top:-150px;
+}
+#zswd{
+	left:40px;
+	top:-5px;
+}
+#sjyy{
+	left:40px;
+	top:-278px;
+}
+#skl{
+	left:270px;
+	top:-500px;
+}
+#zsdhg1{
+	left:160px;
+	top:-195px;
+}
+#zsdhg2{
+	left:140px;
+	top:-50px;
+}
+#zsdhg1,#zsdhg2{
+	background-image:url(../picture/b-3.png);
+ 	background-repeat:no-repeat;
+  	background-position:29px -5px;
+	height:150px;
+	width:200px;
+	line-height:190px;
+	font-size:20px;
+	text-align:center;
+	position:relative;
+	font-weight:900;
+}
+#hztszs:hover,#mhqzs:hover,#fhzs:hover,#zswd:hover,#sjyy:hover,#skl:hover,#zsdhg1:hover,#zsdhg2:hover{
+	width:300px;
+	font-size: 200%;
+}
+#hztszs,#mhqzs,#fhzs,#zswd,#sjyy,#skl,#zsdhg1,#zsdhg2{
+	transition:width 2s;
+	-moz-transition:width 2s;  Firefox 4 
+	-webkit-transition:width 2s; /* Safari and Chrome */
+	-o-transition:width 2s;
+}
+/*xjl*/
+#xjl{
+	position:absolute;
+	z-index:2;
+	left:20px;
+	top:10px;
+}
+#xjl p{
+	width: 200px;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    color: wheat;
+    font-weight: bold;
+    display: block;
+    float: left;
+}
+#xjl img{
+    display: block;
+    float: left;
+}
+#contain div a{
+	color:blue;
+	font-family:微雅软黑;
+}
+#zsgs,#ml,#zsyy{
+	font-family:微雅软黑;
+}
+#zsgs,#zsyy{
+	color:darkorange;
+}

@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+#bg{
+	background-image:url(../picture/bg_cover.jpg);
+	cursor:pointer;
+}
+#tip{
+	padding:20px;
+	border-radius:25px;
+	background-color:#828282;
+	background-color:rgba(0,0,0,0.5);
+	color:white;
+	font-weight:bold;
+	font-size:30px;
+	width:200px;
+	position:absolute;
+	left:50%;
+	margin-left:-100px;
+	text-align:center;
+	display:none;
+}

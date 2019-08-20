@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+#bg{
+	min-width:1000px;
+}
+#bg_pic{
+	z-index:-1;
+	position:absolute;
+}
+.blur {-webkit-filter: blur(8px);filter: blur(8px);}
+/*top*/
+#top{
+	align-items:center;
+	height:15%;
+}
+#title{
+	font-size:24px;
+	background-color:rgba(255,0,4,0.4);
+	color:white;
+	padding:10px;
+	text-align:center;
+}
+/*contain*/
+#contain{
+	height:80%;
+}
+/*part1*/
+#part1{
+	height:55%;
+	border-radius:25px;
+	background-color:rgba(255,255,255,0.5);
+    text-align: center;
+	margin:10px;
+}
+#part1 .text{
+	display:none;
+	width:100px;
+}
+#part1 .text img{
+	width:30px;
+}
+#p_gwc{
+	width:200px;
+	height:170px;
+	position:absolute;
+	margin-left:-100px;
+}
+#part1 .pic{
+	width:150px;
+	display:block;
+	float:left;
+	margin:30px;
+}
+#part1 .pic p{
+	text-align:center;
+	margin-top:0;
+	height:30px;
+	line-height:30px;
+	background-color:#27FD4D;
+	border-radius:8px;
+	color:#0000;
+}
+#part1 .pic img{
+	width:150px;
+	max-height:200px;
+}
+/*part2*/
+#part2{
+	height:37%;
+	margin:10px;
+	border-radius:25px;
+	background-color:rgba(255,255,255,0.5);
+    text-align: center;
+}
+#part2 .pic{
+	width:120px;
+	display:block;
+	float:left;
+	margin:20px;
+}
+#part2 .pic p{
+	text-align:center;
+	margin-top:0;
+	height:30px;
+	line-height:30px;
+	background-color:#666666;
+	border-radius:8px;
+	color:#FFFFFF;
+}
+#part2 .pic img{
+	width:95px;
+}
+/*answer*/
+#answer{
+	display:none;
+}
+.an_block{
+	width:400px;
+	float:left;
+	margin:20px;
+	border:solid 2px;
+	background-color:rgba(255,255,255,0.5);
+}
+.an_left{
+	width:50%;
+	display:block;
+	float:left;
+}
+.an_title p {
+    text-align: center;
+    margin: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+}
+.an_pic{
+	width:100%;
+    text-align: center;
+}
+.an_pic img{
+	max-height:135px;
+}
+.an_text {
+    width: 50%;
+    display: block;
+    float: left;
+    background-color: #000;
+    line-height: 40px;
+    height: 200px;
+    text-align: center;
+}
+.an_text p {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 10px;
+    line-height: 30px;
+    font-size: 20px;
+}
+/*button*/
+#button{
+	height:5%;
+	float:right;
+}
+button{
+	font-family:幼圆;
+	font-size:16px;
+	color:white;
+	background-color:rgba(0,0,0,0.4);
+}
+/*xjl*/
+#xjl{
+	position:absolute;
+	z-index:2;
+	left:100px;
+	top:100px;
+}
+#xjl p{
+	width: 200px;
+    padding: 10px;
+    margin: 0;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    color: wheat;
+    font-weight: bold;
+}

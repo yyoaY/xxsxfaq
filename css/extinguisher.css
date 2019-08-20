@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#bg{
+	background-image:url(../picture/bg_extinguisher.jpg);
+}
+#pic_x{
+	margin-left:710px;
+}

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+svg {
+	position:absolute;
+    width: 700px;
+    height: 200px;
+}
+#zsd {
+    width: 260px;
+}
+#z1{
+    width: 200px;
+    height: 160px;
+    margin-top: 120px;
+}

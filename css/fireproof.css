@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+#bg_pic{
+	z-index:-1;
+	position:absolute;
+}
+.blur {-webkit-filter: blur(4px);filter: blur(4px);}
+#pic_x{
+	margin-left:710px;
+}
+#btn_back{
+	display:none;
+	position:relative;
+	top:-60px;
+	left:925px;
+}
