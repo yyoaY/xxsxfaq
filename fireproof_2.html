@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我是消防安全小卫士-防火歌谣</title>
+<link href="css/bg.css" type="text/css" rel="stylesheet">
+<link href="css/fireproof_2.css" type="text/css" rel="stylesheet">
+<script src="jquery/jquery-3.2.1.min.js"> </script>
+<script src="js/sound.js"></script>
+<script>
+//video
+var audio = document.createElement("audio");
+audio.src ="video/v24.m4a";
+
+window.onload=function(){
+	if(sound==1)audio.play();
+	if(sound==0) document.getElementById("btn_lb").src="picture/btn_lb2.png";
+};	
+
+
+$(document).ready(function(){
+	$("#btn_lb").click(function(){
+		if(sound==1){
+			audio.pause();
+			$("#btn_lb").attr("src","picture/btn_lb2.png");
+			sound=0;
+		}else{
+			audio.currentTime = 0; 
+			audio.play();
+			$("#btn_lb").attr("src","picture/btn_lb.png");
+			sound=1;
+		}
+	});
+	$("#fhml").click(function(){
+		window.location.href='list.html?sound='+sound;
+	});
+	$("#tgqj").click(function(){
+		window.location.href='list.html?sound='+sound;
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="bg">
+<img  src="picture/bg_xfc.jpg" id="bg_pic" class="blur">
+<div id="contain">
+<div id="text">
+<p>小朋友，不玩火，不让父母吃苦果。 </p>
+<p>不乱动用火和电，自我保护是关键。 </p>
+<p>火警电话1 1 9 ，发生火灾不乱走。 </p>
+<p>心不慌、意不乱，按照顺序慢疏散。 </p>
+<p>湿毛巾，捂口鼻，身体前屈头邻地。 </p>
+<p>防火逃生要记清，老师家长都放心。</p>
+</div>
+
+</div>
+<div id="button">
+  <button  onClick="window.location.href='questionsAndAnswers.html?sound='+sound;">习题演练</button>
+  <button  onClick="window.location.href='list.html?sound='+sound;">返回目录</button>
+</div>
+    <img id="btn_lb" src="picture/btn_lb.png" width="50px" height="50px">
+    <img id="fhml" src="picture/btn_fhml.png" width="150px" height="100px">
+    <img id="tgqj" src="picture/btn_tgqj.png" width="150px" height="100px">
+</div>
+<script src="js/wh.js"></script>
+<script type="text/javascript">
+//contain-marginTop
+document.getElementById("bg_pic").style.minWidth= winWidth+"px";
+document.getElementById("bg_pic").style.minHeight= winHeight+"px";
+//button 165 26
+document.getElementById("button").style.left= winWidth-175 +"px";
+document.getElementById("button").style.top= winHeight-36 +"px";
+//contain
+if(winHeight<600)
+{
+	document.getElementById("text").style.fontSize= 20+"px";
+	document.getElementById("text").style.padding= 10+"px";
+	//document.getElementById("contain").style.height= winHeight*0.7;
+	document.getElementById("text").style.width= (winWidth*0.8)+"px";
+	document.getElementById("text").style.marginLeft= (winWidth*0.1)+"px";
+	document.getElementById("text").style.marginTop= (winHeight*0.9-272)/2+"px";
+}
+else{
+//text
+document.getElementById("text").style.width= (winWidth*0.8)+"px";
+document.getElementById("text").style.marginLeft= (winWidth*0.05)+"px";
+document.getElementById("text").style.marginTop= (winHeight*0.9-482)/2+"px";
+}
+//lb
+document.getElementById("btn_lb").style.left=winWidth-50-80+"px";
+//fhml,tgqj
+document.getElementById("fhml").style.left=25+"px";
+document.getElementById("tgqj").style.left=winWidth-150-30+"px";
+</script>
+</body>
+</html>

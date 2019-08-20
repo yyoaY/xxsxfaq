@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>我是消防安全小卫士-趣味应用</title>
+<link href="css/bg.css" type="text/css" rel="stylesheet">
+<link href="css/application_1.css" type="text/css" rel="stylesheet">
+<script src="jquery/jquery-3.2.1.min.js"></script>
+<script src="js/sound.js"></script>
+<script>
+var i=1;
+//video
+var audio = document.createElement("audio");
+audio.src ="video/Application.m4a";
+
+window.onload=function(){
+	if(sound==1)audio.play();
+	if(sound==0) document.getElementById("btn_lb").src="picture/btn_lb2.png";
+};	
+$(document).ready(function(){
+	$("#btn_lb").click(function(){
+		if(sound==1){
+			audio.pause();
+			$("#btn_lb").attr("src","picture/btn_lb2.png");
+			sound=0;
+		}else{
+			audio.currentTime = 0; 
+			audio.play();
+			$("#btn_lb").attr("src","picture/btn_lb.png");
+			sound=1;
+		}
+	});
+	$("#btn_next").click(function(){
+		if(i==1){
+			window.location.href="application_2.html?sound="+sound;
+		}
+  	});
+	$("#btn_answer").click(function(){
+		$("#part1").css("display","none");
+		$("#part2").css("display","none");
+		$("#xjl").css("display","none");
+		$("#answer").css("display","block");
+		$("#title>p").remove();
+		$("#title").css({"line-height":"40px","font-size":"28px"});
+  	});
+});
+</script>
+<script type="text/javascript">
+function allowDrop(ev)
+{
+	ev.preventDefault();
+}
+
+function drag(ev)
+{
+	if(ev.target.id.substring(0,1)!="p") ev.dataTransfer.setData("Text","p_"+ev.target.id);
+	else ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+	var data;
+	ev.preventDefault();
+	data=ev.dataTransfer.getData("Text");
+	document.getElementById("part1").appendChild(document.getElementById(data));
+}
+</script>
+</head>
+
+<body>
+<div id="bg">
+<img src="picture/bg_01.jpeg" id="bg_pic" class="blur">
+	<div id="top">
+        <div id="title">
+        <strong>小朋友们，消防叔叔准备前往火灾救火，下面哪些是消防叔叔需要用到的工具呢？</strong>
+        <p style="font-size:18px">（提示：请拖动工具名称到购物车区域内;无法拖动的为错误答案）</p>
+        </div>
+    </div>
+    <div id="contain">
+        <div id="part1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="picture/p_gwc.png" id="p_gwc">
+        </div>
+        <div id="part2">
+            <div id="p_xfm" class="pic" draggable="true" ondragstart="drag(event)"><p>消防帽</p><img src="picture/fp_xfm.png" id="xfm" draggable="true" ondragstart="drag(event)"></div>
+            <div id="p_jcm" class="pic" draggable="true"> <p>警察帽</p><img src="picture/fp_jcm.png"></div>
+            <div id="p_mhq" class="pic" draggable="true" ondragstart="drag(event)"><p>灭火器</p><img src="picture/fp_mhq.png" id="mhq" draggable="true" ondragstart="drag(event)"></div>
+            <div id="p_xfsd" class="pic" draggable="true" ondragstart="drag(event)"><p>消防水带</p><img src="picture/fp_xfsd.png" id="xfsd" draggable="true" ondragstart="drag(event)"></div>
+            <div id="p_sq" class="pic" draggable="true"><p>手枪</p><img src="picture/fp_sq.png"></div>
+            <div id="p_xfy" class="pic" draggable="true" ondragstart="drag(event)"><p>消防衣</p><img src="picture/fp_xfy.png" id="xfy" draggable="true" ondragstart="drag(event)"></div>
+        </div>
+        <div id="answer">
+            <div class="an_block">
+                <div class="an_left">
+                    <div class="an_title"><p>消防帽</p></div>
+                    <div class="an_pic"><img src="picture/fp_xfm.png"></div>
+                </div>
+                <div class="an_text"><p>消防帽不仅能够对掉落在头上的重物起到减压作用，还具备抗高温等优良性能。</p></div>
+            </div>
+             <div class="an_block">
+                <div class="an_left">
+                    <div class="an_title"><p>消防衣</p></div>
+                    <div class="an_pic"><img src="picture/fp_xfy.png"></div>
+                </div>
+                <div class="an_text"><p>消防服不仅是火灾救助现场不可或缺的必备品，也是保护消防队员身体免受伤害的防火用具。</p></div>
+            </div>
+             <div class="an_block">
+                <div class="an_left">
+                    <div class="an_title"><p>灭火器</p></div>
+                    <div class="an_pic"><img src="picture/fp_mhq.png"></div>
+                </div>
+                <div class="an_text"><p>灭火器是一种可携式灭火工具。灭火器内放置化学物品，用以救灭火灾。</p></div>
+            </div>
+             <div class="an_block">
+                <div class="an_left">
+                    <div class="an_title"><p>消防水带</p></div>
+                    <div class="an_pic"><img src="picture/fp_xfsd.png"></div>
+                </div>
+                <div class="an_text"><p>消防水带是用来运送高压水或泡沫等阻燃液体的软管。</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="button">
+        <button id="btn_answer" style="font-weight:bold; width:130px; background-color:rgba(255,0,4,0.7);">查看答案</button>
+        <button id="btn_next">下一页</button>
+        <button id="btn_back" onClick="window.location.href='list.html?sound='+sound;">返回目录</button>
+    </div>
+    <div id="xjl">
+    	<img src="picture/mofashi_5.png" width="200px" height="200px">
+        <p>小朋友选好了吗，选好了点击<strong style="color:#FF9E9F;">查看答案</strong>，就可以检查自己是否答对了哦</p>
+    </div>
+    <img id="btn_lb" src="picture/btn_lb.png" width="50px" height="50px">
+</div>
+<script src="js/wh.js"></script>
+<script type="text/javascript">
+//p_gwc
+document.getElementById("p_gwc").style.marginTop= (window.winHeight*0.95*0.58-170)*0.5 +"px";
+//xjl
+document.getElementById("xjl").style.left= (window.winWidth-220-20) +"px";
+document.getElementById("xjl").style.top= (window.winHeight-278-window.winHeight*0.05) +"px";
+//lb
+document.getElementById("btn_lb").style.top=20+"px";
+document.getElementById("btn_lb").style.left=winWidth-50-20+"px";
+</script>
+</body>
+</html>

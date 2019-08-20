@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我是消防安全小卫士-目录</title>
+<link href="css/bg.css" type="text/css" rel="stylesheet">
+<link href="css/list.css" type="text/css" rel="stylesheet">
+<script src="jquery/jquery-3.2.1.min.js"> </script>
+<script src="js/sound.js"></script>
+<script>
+function index(){
+	$('.name').css('color','blue');  //默认值
+	setTimeout(" $('.name').css('color','#71A4FF')",300); //第一次闪烁
+	setTimeout( "$('.name').css('color','blue')",200); //第二次闪烁
+};
+window.setInterval(index, 800); //让index 多久循环一次 
+//video
+var audio = document.createElement("audio");
+audio.src ="video/list.m4a";
+
+window.onload=function(){
+	if(sound==1)audio.play();
+	if(sound==0) document.getElementById("btn_lb").src="picture/btn_lb2.png";
+};	
+$(document).ready(function(){
+	$("#btn_lb").click(function(){
+		if(sound==1){
+			audio.pause();
+			$("#btn_lb").attr("src","picture/btn_lb2.png");
+			sound=0;
+		}else{
+			audio.currentTime = 0; 
+			audio.play();
+			$("#btn_lb").attr("src","picture/btn_lb.png");
+			sound=1;
+		}
+	});
+	$("#hztszs").click(function(){
+	  window.location.href="fireEscape0.html?sound="+sound;
+  	});
+	$("#mhqzs").click(function(){
+	  window.location.href="extinguisher_2.html?sound="+sound;
+  	});
+	$("#fhzs").click(function(){
+	  window.location.href="fireproof_2.html?sound="+sound;
+  	});
+	$("#zswd").click(function(){
+	  window.location.href="questionsAndAnswers.html?sound="+sound;
+  	});
+	$("#zsdhg1").click(function(){
+	  window.location.href="review_qa.html?sound="+sound;
+  	});
+	$("#sjyy").click(function(){
+	  window.location.href="application_1.html?sound="+sound;
+  	});
+	$("#zsdhg2").click(function(){
+	  window.location.href="review_app.html?sound="+sound;
+  	});
+	$("#skl").click(function(){
+	  window.location.href="test-doggerel.html?sound="+sound;
+  	});
+});
+</script>
+<style type="text/css">
+a{
+	text-decoration: none;
+}
+a:visited,a:link{
+	color:blue;
+}
+a:hover{
+	color:#F4A1A2;
+}
+a:active{
+	color:#FF9C46;
+}
+</style>
+</head>
+
+<body>
+<div id="bg">
+<img src="picture/bg_list.jpg" id="bg_pic" class="blur">
+    <div id="title">
+		<div id="ml"><strong>目录</strong></div>
+    </div>
+    <div id="contain">
+        <div id="left">
+            <div id="zsgs"><strong>知识小天地</strong></div>
+            <div id="hztszs"><a class="name">火灾逃生知识</a></div>
+            <div id="mhqzs"><a>灭火器课堂</a></div>
+            <div id="fhzs"><a>防火歌谣</a></div>
+        </div>
+        <div id="right">
+            <div id="zsyy"><strong>学习小殿堂</strong></div>
+            <div id="zswd"><a>习题演练</a></div>
+            <div id="zsdhg1">&emsp;<a>知识小回顾</a></div>
+            <div id="zsdhg2">&emsp;<a>知识小回顾</a></div>
+            <div id="sjyy"><a>趣味应用</a></div>
+            <div id="skl"><a>顺口溜</a></div>
+        </div>
+    </div>
+    <div id="xjl">
+    	<img src="picture/mofashi_6.png" width="150px" height="150px">
+        <p>第一次进入目录的小朋友点击<strong style="color:#FF9E9F;">火灾逃生知识</strong>进入第一个模块哦</p>
+    </div>
+    <img id="btn_lb" src="picture/btn_lb.png" width="50px" height="50px">
+</div>
+</body>
+<script src="js/wh.js"></script>
+<script type="text/javascript">
+/*bg_pic*/
+document.getElementById("bg_pic").style.minWidth= winWidth+"px";
+document.getElementById("bg_pic").style.minHeight= winHeight+"px";
+/*ml*/
+document.getElementById("ml").style.top= winHeight/2-100+"px";
+document.getElementById("left").style.top= (winHeight-450)/2+"px";
+document.getElementById("left").style.left= (winWidth*0.5-450)/2+"px";
+document.getElementById("right").style.top= (winHeight-450)/2+"px";
+document.getElementById("right").style.left= (winWidth*0.5-450)/2+winWidth*0.5+"px";
+//lb
+document.getElementById("btn_lb").style.top=20+"px";
+document.getElementById("btn_lb").style.left=winWidth-50-20+"px";
+</script>
+</html>

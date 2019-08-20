@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>我是消防安全小卫士-顺口溜</title>
+<link href="css/test-doggerel.css" type="text/css" rel="stylesheet">
+<link href="css/bg.css" type="text/css" rel="stylesheet">
+<script src="jquery/jquery-3.2.1.min.js"> </script>
+<script src="js/sound.js"></script>
+<script>
+//video
+var audio = document.createElement("audio");
+audio.src ="video/Last.m4a";
+
+window.onload=function(){
+	if(sound==1)audio.play();
+	if(sound==0) document.getElementById("btn_lb").src="picture/btn_lb2.png";
+};	
+$(document).ready(function(){
+	$("#btn_lb").click(function(){
+		if(sound==1){
+			audio.pause();
+			$("#btn_lb").attr("src","picture/btn_lb2.png");
+			sound=0;
+		}else{
+			audio.currentTime = 0; 
+			audio.play();
+			$("#btn_lb").attr("src","picture/btn_lb.png");
+			sound=1;
+		}
+	});
+  $("#button1").click(function(){
+    $("#picture1").fadeIn();
+	$("#picture3").fadeOut("slow");
+	$("#picture2").fadeOut("slow");
+	$("#picture4").fadeOut("slow");
+	$("#picture5").fadeOut("slow");
+	$("#picture6").fadeOut("slow");
+  });
+  $("#button2").click(function(){
+	$("#picture1").fadeOut("slow");
+	$("#picture3").fadeOut("slow");
+	$("#picture4").fadeOut("slow");
+	$("#picture5").fadeOut("slow");
+	$("#picture6").fadeOut("slow");
+    $("#picture2").fadeIn();
+  });
+  $("#button3").click(function(){
+	$("#picture1").fadeOut("slow");
+	$("#picture2").fadeOut("slow");
+	$("#picture4").fadeOut("slow");
+	$("#picture5").fadeOut("slow");
+	$("#picture6").fadeOut("slow");
+    $("#picture3").fadeIn();
+  });
+  $("#button4").click(function(){	
+  	$("#picture1").fadeOut("slow");
+	$("#picture2").fadeOut("slow");
+	$("#picture3").fadeOut("slow");
+	$("#picture5").fadeOut("slow");
+	$("#picture6").fadeOut("slow");
+    $("#picture4").fadeIn();
+  });
+  $("#button5").click(function(){	
+ 	$("#picture1").fadeOut("slow");
+	$("#picture2").fadeOut("slow");
+	$("#picture3").fadeOut("slow");
+	$("#picture4").fadeOut("slow");
+	$("#picture6").fadeOut("slow");
+    $("#picture5").fadeIn();
+  });
+  $("#button6").click(function(){
+	$("#picture1").fadeOut("slow");
+	$("#picture2").fadeOut("slow");
+	$("#picture3").fadeOut("slow");
+	$("#picture4").fadeOut("slow");
+	$("#picture5").fadeOut("slow");
+	$("#picture6").fadeIn();
+  });
+  $("#show").click(function(){
+	  window.location.href="review_app.html?sound="+sound;
+  });
+  $("#show1").click(function(){
+	  window.location.href="list.html?sound="+sound;
+  });
+});
+</script>
+</head>
+<body>
+<div id="bg">
+<div id="head">
+<div id="title">
+防火安全顺口溜
+</div>
+</div>
+<div id=doggerel>
+119电话要记清，及时准确报火警
+<button class="bt" id="button1">->></button>
+    <div id="picture1" style="display:none">
+   		 <img src="picture/doggerel1.jpg" width="240" height="200">
+	</div>
+<br>
+
+发生火灾烟雾浓，巧用毛巾能逃生
+<button class="bt" id="button2">->></button>
+    <div id="picture2" style="display:none">
+        <img src="picture/doggerel2.jpg" width="240" height="200">
+    </div>
+<br>
+安全出口要记清，遇到火情速逃生 
+<button class="bt" id="button3">->></button>
+    <div id="picture3" style="display:none">
+        <img src="picture/doggerel3.jpg" width="240" height="200">
+    </div>
+<br>
+火灾烟气向上升，湿物捂鼻快爬行
+<button class="bt" id="button4">->></button>
+	<div id="picture4" style="display:none">
+  		<img src="picture/doggerel4.jpg" width="240" height="200">
+	</div>
+<br>
+危险物品易爆燃，家中存放不安全
+<button class="bt" id="button5">->></button>
+    <div id="picture5" style="display:none">
+        <img src="picture/doggerel5.jpg" width="240" height="200">
+    </div>
+<br>
+衣服着火莫奔跑，就地打滚压火苗
+<button class="bt" id="button6">->></button>
+    <div id="picture6" style="display:none">
+         <img src="picture/doggerel2.jpg" width="240" height="200">
+    </div>
+<br>
+</div>
+<div id="nbutton0">
+<input type="image" src="picture/button.png" width="70" height="70" id="img">
+<div id="show">
+上一页
+</div>
+</div>
+<div id="nbutton1">
+<div id="show1">
+返回目录
+</div>
+<input type="image" src="picture/button.png" width="70" height="70" id="img1">
+</div>
+<div id="xjl">
+    	<img src="picture/mofashi_5.png" width="200px" height="200px">
+        <p>小朋友,可以点击顺口溜右边的<strong style="color:#FF9E9F;">->></strong>，有意想不到的效果哦，快试一试吧</p>
+</div>
+    <img id="btn_lb" src="picture/btn_lb.png" width="50px" height="50px">
+</div>
+<script src="js/wh.js"></script>
+<script>
+//xjl
+document.getElementById("xjl").style.left= (window.winWidth-200-40) +"px";
+//lb
+document.getElementById("btn_lb").style.top=20+"px";
+document.getElementById("btn_lb").style.left=winWidth-50-20+"px";
+</script>
+</body>
+</html>

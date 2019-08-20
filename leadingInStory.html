@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>我是消防安全小卫士-前言</title>
+<link href="css/bg.css" type="text/css" rel="stylesheet">
+<link href="css/leadingInStory.css" type="text/css" rel="stylesheet">
+<script src="jquery/jquery-3.2.1.min.js"> </script>
+<script src="js/sound.js"></script>
+<script>
+	var i = 1;
+	var audio = document.createElement("audio");
+	audio.src ="video/v0.m4a";
+window.onload=function(){
+	if(sound==1)audio.play();
+	if(sound==0) document.getElementById("btn_lb").src="picture/btn_lb2.png";
+};	
+$(document).ready(function(){
+	
+	$("#btn_lb").click(function(){
+		if(sound==1){
+			audio.pause();
+			$("#btn_lb").attr("src","picture/btn_lb2.png");
+			sound=0;
+		}else{
+			audio.currentTime = 0; 
+			audio.play();
+			$("#btn_lb").attr("src","picture/btn_lb.png");
+			sound=1;
+		}
+	});
+	$("#btn_next").fadeIn("slow");
+	$("#btn_next").click(function(){
+		window.location.href="list.html?sound="+sound;
+	});
+	$("#btn_next").mouseover(function(){
+		$("#go").fadeIn();
+	});
+	$("#btn_next").mouseout(function(){
+		$("#go").fadeOut();
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="bg">
+    <div id="contain">
+        <div id="pic"><img src="picture/mofashi_1.png"></div>
+        <div id="talk">
+            <p id="t">
+            小朋友，你好，我是你学习防火知识的小伙伴，欢迎来到防火知识小殿堂，在这里我将为你开启全新的旅程，准备好了吗？快带上消防帽和我去火灾现场吧~
+            </p>
+            <div id="btn_next"><img src="picture/firehat.png"><p id="go">&emsp;出发！</p></div>
+        </div>
+    </div>
+    <img id="btn_lb" src="picture/btn_lb.png" width="50px" height="50px">
+</div>
+<script src="js/wh.js"></script>
+<script>
+//lb
+document.getElementById("btn_lb").style.top=20+"px";
+document.getElementById("btn_lb").style.left=winWidth-50-20+"px";
+</script>
+</body>
+</html>

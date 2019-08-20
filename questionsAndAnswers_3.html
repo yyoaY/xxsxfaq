@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>我是消防安全小卫士-习题演练</title>
+<link href="css/bg.css" type="text/css" rel="stylesheet">
+<link href="css/qa.css" type="text/css" rel="stylesheet">
+<link href="css/qa_3.css" type="text/css" rel="stylesheet">
+<script src="jquery/jquery-3.2.1.min.js"></script>
+<script src="js/sound.js"></script>
+<script>
+var i=1;
+$(document).ready(function(){
+	$(".choice").click(function(){
+		if(i==1){
+		$("#box_choice").fadeOut();
+		$("#correct").fadeIn();
+		i++;}
+  	});
+	//tip1
+	$("#p1").mouseover(function(){
+		$("#c1").animate({height:'+=20px'});
+    	$("#tip1").fadeIn();
+ 	});
+	$("#p1").mouseout(function(){
+		$("#c1").animate({height:'-=20px'});
+    	$("#tip1").fadeOut();
+  	});
+	//tip2
+	$("#p2").mouseover(function(){
+		$("#c2").animate({height:'+=20px'});
+    	$("#tip2").fadeIn();
+ 	});
+	$("#p2").mouseout(function(){
+		$("#c2").animate({height:'-=20px'});
+    	$("#tip2").fadeOut();
+  	});
+	//tip3
+	$("#p3").mouseover(function(){
+		$("#c3").animate({height:'+=20px'});
+    	$("#tip3").fadeIn();
+ 	});
+	$("#p3").mouseout(function(){
+		$("#c3").animate({height:'-=20px'});
+    	$("#tip3").fadeOut();
+  	});
+	//tip4
+	$("#p4").mouseover(function(){
+		$("#c4").animate({height:'+=20px'});
+    	$("#tip4").fadeIn();
+ 	});
+	$("#p4").mouseout(function(){
+		$("#c4").animate({height:'-=20px'});
+    	$("#tip4").fadeOut();
+  	});
+	//tipr
+	$("#pr").mouseover(function(){
+		$("#cr").animate({height:'+=20px'});
+    	$("#tipr").fadeIn();
+ 	});
+	$("#pr").mouseout(function(){
+		$("#cr").animate({height:'-=20px'});
+    	$("#tipr").fadeOut();
+  	});
+	//上一页
+	$("#btn_up").click(function(){
+		window.location.href="questionsAndAnswers_2.html?sound="+sound;
+  	});
+	//下一页
+	$("#btn_down").click(function(){
+		window.location.href="questionsAndAnswers_4.html?sound="+sound;
+  	});
+});
+</script>
+</head>
+<body>
+<div id="bg">
+	<div id="head">
+	  <div id="question">
+        <div id="number">第③题</div>
+        <div id="title">下列哪项逃生方式是正确的？</div>
+      </div>
+    </div>
+    <div id="contain">
+        <table id="box_choice">
+        <tr>
+            <td align="center">
+            <div id="c1" class="choice">
+              <div id="p1" class="picture"><img src="picture/test3-A.jpg"></div>
+              <div id="t1" class="text">A.	乘坐电梯</div>
+              <div id="tip1" class="tip">发生火灾不能乘电梯哦</div>
+            </div>
+            </td>
+            <td align="center">
+            <div id="c2" class="choice">
+              <div id="p2" class="picture"><img src="picture/test3-B.jpg"></div>
+              <div id="t2" class="text">B.	从窗户直接跳楼</div>
+              <div id="tip2" class="tip">直接跳楼会受到伤害</div>
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+            <div id="c3" class="choice">
+              <div id="p3" class="picture"><img src="picture/test3-C.jpg"></div>
+              <div id="t3" class="text">C.	从安全出口处逃生</div>
+              <div id="tip3" class="tip">安全出口帮助我们快速逃生</div>
+            </div>
+            </td>
+            <td align="center">
+            <div id="c4" class="choice">
+              <div id="p4" class="picture"><img src="picture/test3-D.jpg"></div>
+              <div id="t4" class="text">D.	胡乱奔跑逃窜</div>
+              <div id="tip4" class="tip">错误的做法</div>
+            </div>
+            </td>
+        </tr>
+        </table>
+        <div id="correct">
+        	<div id="cr" class="choice">
+                <div id="pr" class="picture"><img src="picture/test3-C.jpg"></div>
+                <div id="tr" class="text">C.	从安全出口处逃生</div>
+                <div id="tipr" class="tip">安全出口帮助我们快速逃生</div>
+            </div>
+             <div id="zsd">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+                   <line x1="40" y1="26" x2="140" y2="50" style="stroke:#ADD8E6;stroke-width:2"/>
+                </svg>
+                <div id="z1">在发生火灾时，乘坐电梯是非常危险的行为。从窗户直接跳楼很有可能会伤害到我们自己哦。面对火灾时，胡乱奔跑逃窜是很危险的，小朋友们要保持冷静快速地从安全出口处逃生哟。</div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+    <button id="btn_up">上一题</button>
+    <button id="btn_down" class="btn">下一题</button>
+    <button id="btn_back" onClick="window.location.href='list.html?sound='+sound;">返回目录</button>
+    </div>
+</div>
+<script src="js/wh.js"></script>
+<script type="text/javascript">
+//contain-marginTop
+document.getElementById("question").style.marginTop= window.winHeight*0.15 - 40 +"px";
+//#box_choice
+document.getElementById("box_choice").style.width= window.winWidth*0.5 +"px";
+document.getElementById("box_choice").style.height= window.winHeight*0.8 +"px";
+//#correct
+document.getElementById("correct").style.marginLeft= -330*0.5 +"px";
+document.getElementById("correct").style.marginTop= (window.winHeight*0.8-320)*0.5 +"px";
+//button 217 24
+document.getElementById("bottom").style.left= winWidth-217-10 +"px";
+document.getElementById("bottom").style.top= winHeight-24-10 +"px";
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>我是消防安全小卫士-火灾逃生知识 地点：房间</title>
+<link href="css/bg.css" type="text/css" rel="stylesheet">
+<link href="css/fireEscape.css" type="text/css" rel="stylesheet">
+<script src="jquery/jquery-3.2.1.min.js"> </script>
+<style type="text/css">
+#bg{
+	background-image:url(picture/bg_fireEscape.jpg);
+}
+</style>
+
+<script src="js/sound.js"></script>
+<script>
+var i=1,a=0;
+//video
+var audio = document.createElement("audio");
+audio.src ="video/v3.m4a";
+
+window.onload=function(){
+	if(sound==1)audio.play();
+	if(sound==0) document.getElementById("btn_lb").src="picture/btn_lb2.png";
+};
+
+/*switch(sound){
+	case 0:
+	document.getElementById("btn_lb").src("picture/btn_lb2.png");
+	break;
+	case 1:
+	audio.play();
+	break;
+}*/
+
+$(document).ready(function(){
+	
+	/*if(sound){
+		audio.play();
+	}else{
+		$("#btn_lb").attr("src","picture/btn_lb2.png");
+	}*/
+	
+	$("#pic_m").fadeIn();
+	$("#choice_1").fadeIn();
+	$("#btn_lb").click(function(){
+		if(sound==1){
+			audio.pause();
+			$("#btn_lb").attr("src","picture/btn_lb2.png");
+			sound=0;
+		}else{
+			audio.currentTime = 0; 
+			audio.play();
+			$("#btn_lb").attr("src","picture/btn_lb.png");
+			sound=1;
+		}
+	});
+	$("#btn_next").click(function(){
+		if(i==1){
+		   	$("#btn_next").fadeOut();
+			$("#choice_1").delay("slow").fadeOut();
+			$("#talk").delay("1000").fadeIn();
+		   	$("#btn_next").delay("800").fadeIn();
+			i++;
+			audio.currentTime = 0; 
+			if(sound==1)audio.play();
+		}
+	  	else if(i==2){
+			$("#pic_m").html("<img src='picture/mofashi_4.png'>");
+		   	$("#btn_next").fadeOut();
+			$("#talk").delay("slow").fadeOut();
+			$("#choice_2").delay("1000").fadeIn();
+			a=0;
+		  	i++;
+			audio.src ="video/v5.m4a";
+			if(sound==1)audio.play();
+		}
+	  	else if(i==3){
+		   	$("#btn_next").fadeOut();
+			$("#choice_2").delay("slow").fadeOut();
+			$("#talk").delay("1000").fadeIn();
+		   	$("#btn_next").delay("800").fadeIn();
+		  	i++;
+			audio.currentTime = 0; 
+			if(sound==1)audio.play();
+		}
+		else if(i==4){
+			window.location.href="fireEscape_2.html?sound="+sound;
+		}
+  	});
+	//choice_1
+   	$("#btn_w1").click(function(){
+	   	if(a==0){
+			$("#pic_m").html("<img src='picture/mofashi_1.png'>");
+		   	$("#choice_1>.wrong").fadeTo("slow",0.15);
+		   	$("#talk_p").html("<br>这样做不对哟，在发生火灾时不能盲目选择跳楼哦，从高楼跳下，我们会受伤哟。如果一个人在家，在房间哭爸爸妈妈也听不到不能及时救我们。这个时候就要拨打火警电话119，向消防员叔叔求救哟！");
+			audio.src ="video/v4-1.m4a";
+		   	$("#btn_next").fadeIn();
+		   	a++;}
+  	});
+   	$("#btn_r1").click(function(){
+	   	if(a==0){
+			$("#pic_m").html("<img src='picture/mofashi_3.png'>");
+	   		$("#choice_1>.wrong").fadeTo("slow",0.15);
+	   		$("#talk_p").html("<br>小朋友你真是太棒啦，在发生火灾时不能盲目选择跳楼哦，从高楼跳下，我们会受伤哟。如果一个人在家，在房间哭爸爸妈妈也听不到不能及时救我们。这个时候就要拨打火警电话119，向消防员叔叔求救哟！");
+			audio.src ="video/v4.m4a";
+			$("#btn_next").fadeIn();
+	   		a++;}
+  	});
+   	$("#btn_w2").click(function(){
+	   	if(a==0){
+			$("#pic_m").html("<img src='picture/mofashi_1.png'>");
+			$("#choice_1>.wrong").fadeTo("slow",0.15);
+		   	$("#talk_p").html("<br>这样做不对哟，在发生火灾时不能盲目选择跳楼哦，从高楼跳下，我们会受伤哟。如果一个人在家，在房间哭爸爸妈妈也听不到不能及时救我们。这个时候就要拨打火警电话119，向消防员叔叔求救哟！");
+			audio.src ="video/v4-1.m4a";
+			$("#btn_next").fadeIn();
+			a++;}
+  	});
+	//choice_2
+	$("#btn_r2").click(function(){
+	   	if(a==0){
+			$("#pic_m").html("<img src='picture/mofashi_3.png'>");
+	   		$("#choice_2>.wrong").fadeTo("slow",0.15);
+	   		$("#talk_p").html("<br>你真是太棒啦，外面着火时，可以披上浸湿的衣物或被褥等，并用湿毛巾捂住口鼻来保护自己哟。");
+			$("#btn_next").fadeIn();
+			audio.src ="video/v6.m4a";
+	   		a++;}
+  	});
+   	$("#btn_w3").click(function(){
+	   	if(a==0){
+			$("#pic_m").html("<img src='picture/mofashi_1.png'>");
+			$("#choice_2>.wrong").fadeTo("slow",0.15);
+			$("#talk_p").html("<br>这样做不对哟，外面着火时，可以披上浸湿的衣物或被褥等，并用湿毛巾捂住口鼻来保护自己哟。");
+			$("#btn_next").fadeIn();
+			audio.src ="video/v6-1.m4a";
+			a++;}
+  	});
+	$("#fhml").click(function(){
+		window.location.href='list.html?sound='+sound;
+	});
+	$("#tgqj").click(function(){
+		window.location.href='fireEscape_2.html?sound='+sound;
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="bg">
+<div id="contain">
+    <div id="pic_m"><img src="picture/mofashi_4.png"></div>
+    <div id="talk">
+    <p id="talk_p"></p>
+    </div>
+    <div id="choice_1">
+    <strong class="q">小朋友住在高楼，外面着火了，他现在该怎么做呢：</strong>
+    <p class="wrong" id="btn_w1"><button>A</button>跑向窗户跳楼</p>
+    <p id="btn_r1"><button>B</button>拨打火警电话119</p>
+    <p class="wrong" id="btn_w2"><button>C</button>大喊大叫在房间哭</p>
+    </div>
+    <div id="choice_2">
+    <strong class="q">外面着火了，我们现在是否需要拿些什么保护自己？</strong>
+    <p id="btn_r2"><button>A</button>浸湿的被子或毛巾</p>
+    <p class="wrong" id="btn_w3"><button>B</button>不需要拿什么</p>
+    </div>
+    <div id="btn_next"><img src="picture/icon_next.png" ></div>
+    
+</div>
+
+    <img id="btn_lb" src="picture/btn_lb.png" width="50px" height="50px">
+    <img id="fhml" src="picture/btn_fhml.png" width="150px" height="100px">
+    <img id="tgqj" src="picture/btn_tgqj.png" width="150px" height="100px">
+</div>
+<script src="js/wh.js"></script>
+<script type="text/javascript">
+//contain-marginTop
+document.getElementById("contain").style.marginTop= (window.winHeight - 345) +"px";
+//lb
+document.getElementById("btn_lb").style.left=winWidth-50-80+"px";
+//fhml,tgqj
+document.getElementById("fhml").style.left=25+"px";
+document.getElementById("tgqj").style.left=winWidth-150-30+"px";
+</script>
+</body>
+</html>

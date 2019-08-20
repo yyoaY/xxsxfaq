@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>我是消防安全小卫士</title>
+<link href="css/bg.css" type="text/css" rel="stylesheet">
+<link href="css/index.css" type="text/css" rel="stylesheet">
+<script src="jquery/jquery-3.2.1.min.js"></script>
+<script src="js/sound.js"></script>
+<script>
+//var sound=1;
+//video
+var audio = document.createElement("audio");
+audio.src ="video/Start.m4a";
+window.onload=function(){
+	if(sound!=1&&sound!=0)sound=1;
+	if(sound==1)audio.play();
+	if(sound==0) document.getElementById("btn_lb").src="picture/btn_lb2.png";
+};	
+
+$(document).ready(function(){
+	$("#bg").click(function(){
+		window.location.href="leadingInStory.html?sound="+sound;
+	});
+	$("#tip").fadeIn(2000);
+	$("#btn_lb").click(function(){
+		if(sound==1){
+			audio.pause();
+			$("#btn_lb").attr("src","picture/btn_lb2.png");
+			sound=0;
+		}else{
+			audio.currentTime = 0; 
+			audio.play();
+			$("#btn_lb").attr("src","picture/btn_lb.png");
+			sound=1;
+		}
+	});
+});
+</script>
+</head>
+<body>
+<div id="bg">
+<div id="tip">点击进入</div>
+</div>
+    <img id="btn_lb" src="picture/btn_lb.png" width="50px" height="50px">
+<script src="js/wh.js"></script>
+<script type="text/javascript">
+//tip
+document.getElementById("tip").style.marginTop= (window.winHeight*0.8-15) +"px";
+//lb
+document.getElementById("btn_lb").style.top=20+"px";
+document.getElementById("btn_lb").style.left=winWidth-50-20+"px";
+</script>
+</body>
+</html>

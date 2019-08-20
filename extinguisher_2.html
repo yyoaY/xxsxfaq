@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>我是消防安全小卫士-灭火器课堂</title>
+<link href="css/bg.css" type="text/css" rel="stylesheet">
+<link href="css/extinguisher_2.css" type="text/css" rel="stylesheet">
+<script src="jquery/jquery-3.2.1.min.js"> </script>
+<script src="js/sound.js"></script>
+<script>
+
+$(document).ready(function(){
+	$("#fhml").click(function(){
+		window.location.href='list.html?sound='+sound;
+	});
+	$("#tgqj").click(function(){
+		window.location.href='fireproof.html?sound='+sound;
+	});
+});
+</script>
+</head>
+<body>
+<div id="bg">
+<img src="picture/bg_extinguisher.jpg" id="bg_pic" class="blur">
+<div id="contain">
+<div id="left">
+<h3 id="thead">干粉灭火器(常见的灭火器)</h3>
+<h4>用途：</h4>
+<p>1）干粉灭火器可扑灭一般的火灾，还可扑灭油，气等燃烧引起的失火。</p>
+<p>2）主要用于扑救石油、有机溶剂等易燃液体、可燃气体和电气设备的初期火灾。</p>
+<h4>使用方法：</h4>
+<p>1）拔掉安全栓，上下摇晃几下。</p>
+<p>2）根据风向，站在上风位置。</p>
+<p>3）对准火苗的根部，一手握住压把，一手握住喷嘴进行灭火。</p>
+<img src="picture/mhqsyff.jpg" id="myImg" alt="手提式干粉灭火器使用方法">
+</div>
+<div id="right">
+<img src="picture/fp_mhq.png" id="mhq" class="shadow">
+</div>
+
+</div>
+<div id="button">
+  <button  onClick="window.location.href='fireproof.html?sound='+sound;" style="font-weight:bold; width:130px; background-color:rgba(255,0,4,0.4); color:white;">&lt;返回情节</button>
+</div>
+    <img id="fhml" src="picture/btn_fhml.png" width="150px" height="100px">
+    <img id="tgqj" src="picture/btn_tgqj.png" width="150px" height="100px">
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// 获取模态窗口
+var modal = document.getElementById('myModal');
+
+// 获取图片模态框，alt 属性作为图片弹出中文本描述
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.alt;
+}
+
+// 获取 <span> 元素，设置关闭模态框按钮
+var span = document.getElementsByClassName("close")[0];
+
+// 点击 <span> 元素上的 (x), 关闭模态框
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+<script src="js/wh.js"></script>
+<script type="text/javascript">
+//contain-marginTop
+if(window.winWidth<1190)
+{
+document.getElementById("myImg").style.width= 300+"px";
+document.getElementById("mhq").style.display= "none";
+}
+document.getElementById("bg_pic").style.minWidth= winWidth+"px";
+document.getElementById("bg_pic").style.minHeight= winHeight+"px";
+//fhml,tgqj
+document.getElementById("fhml").style.left=25+"px";
+document.getElementById("tgqj").style.left=winWidth-150-30+"px";
+</script>
+</body>
+</html>
